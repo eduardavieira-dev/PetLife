@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;/*as bordas são calculadas com o padding*/
+    font-family:'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    margin: 0 auto;
+    /* centraliza o cabeçalho */
+    background:  #FF9A6C;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    color: #263238;
+    padding:24px 80px 24px 80px;
+}
+
+header nav a{
+    color: #ffffff;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+
+}
+
+#inicio{
+    display: flex;
+    align-items: center;
+    gap: 32px;/*distanciamento dos elementos*/
+    /*topo, direita, baixo, esquerda*/
+    padding: 24px 80px 128px 80px;
+    position: relative;
+}
+
+h1,
+h2{
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragrafo{
+    line-height: 150%;
+    margin-bottom: 32px;
+}
+
+.botao,
+.botao-transparente {
+    padding: 16px 32px;
+    width: calc(40% - 5px);
+    /* 50% do contêiner com 5px de margem entre eles */
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    /* para incluir a borda e o preenchimento na largura */
+}
+
+.botao{
+    background-color: #FF725E;
+    border-radius: 8px;
+    color: #ffffff;
+    /*vertical, horizontal*/
+    padding: 16px 32px;
+    text-decoration: none;
+    
+}
+
+.botao:hover{
+    background-color: #ff8f66;
+}
+
+
+.botao-transparente{
+    background-color: transparent;
+    color: #FF725E;
+    text-underline-offset: 4px;
+    margin-right: 0;
+    /* Para remover a margem no último elemento */
+}
+
+@media screen and (max-width: 600px) {
+
+    .botao,
+    .botao-transparente {
+        padding: 12px 24px;
+        /* ou qualquer valor que você achar apropriado */
+        font-size: 14px;
+        /* ou qualquer valor que você achar apropriado */
+    }
+}
+
+.absolute{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+#clinica{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+    flex-direction: row-reverse;
+}
+#clinica li{
+    margin-top: 16px;
+    margin-left: 32px;
+}
+
+#farmacia{
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#farmacia img{
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo{
+    max-width: 950px;
+    margin: 0 auto;/*centralizar os elementos*/
+}
+
+#duvidas{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+.duvida{
+    position: relative;
+    /*Isso é usado para limitar todos os elementos com o valor absolute dentro dessa classe. Vai se tornar a referencia*/
+}
+
+#duvidas .duvida h3{
+    border: 2px solid #FF725E;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.duvida img{
+    position: absolute;
+    top: 32px;
+    right:24px;
+    cursor: pointer;
+    max-width: 80%;
+}
+
+
+.duvida .paragrafo {
+    border-right: 1px solid #FF725E;
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #FF725E;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    /*vertical zerado e horizontal ao fundo do outro elemento*/
+    height: 0;
+    opacity: 0;/*torna invisivel*/
+    overflow: hidden;/*usado para esconder o elemento quando ele transbordar*/
+    transition: .2s;/*torna mais fluida a animação*/
+}
+
+.duvida.ativa .paragrafo{
+    height: fit-content;/*faz o conteudo caber*/
+    opacity: 1;/*faz o elemento aparecer*/
+    padding: 24px;
+}
+
+footer{
+    background-color: rgba(255, 152, 108, 0.25);
+    justify-content: space-between;
+    display: flex;/*Deixa um ao lado do outro*/
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img, .titulo{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    color:#263238;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    
+}
+
+footer p{
+    margin-bottom: 16px;
+    max-width: 350px;
+}
+
+footer p a{
+    color:#263238;
+    text-decoration: none;
+}
+
+#copyright{
+    background-color: #263238;
+    color: #ffffff;
+    padding: 24px;
+    text-align: center;
+}
+
+#copyright a{
+    color:#FF9A6C;
+}
+
