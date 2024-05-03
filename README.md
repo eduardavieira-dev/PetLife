@@ -4,3 +4,14 @@
 
 Caso tenha interesse em fazer o mini curso este é o link: [Mini Curso Start na Programação (HTML, CSS e Java Script)](https://www.onebitcode.com/minicurso)
 
+# Como executar o projeto
+
+```bash
+# clonar repositório
+git clone https://github.com/eduardavieira-dev/PetLife.git
+# executar o comando npm start
+
+```
+
+
+
